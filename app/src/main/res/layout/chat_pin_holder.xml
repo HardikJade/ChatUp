@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/alertDialogPinParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingTop="20dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="20dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pinImage1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="#516091"
+        app:layout_constraintEnd_toStartOf="@+id/pinImage2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pinText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Documents"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintEnd_toEndOf="@+id/pinImage1"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="@+id/pinImage1"
+        app:layout_constraintTop_toBottomOf="@+id/pinImage1" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pinImage2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="#516091"
+        app:layout_constraintEnd_toStartOf="@+id/pinImage3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pinImage1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pinText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Camera"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintEnd_toEndOf="@+id/pinImage2"
+        app:layout_constraintStart_toStartOf="@+id/pinImage2"
+        app:layout_constraintTop_toBottomOf="@+id/pinImage2" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pinImage3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="#516091"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pinImage2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pinText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/poppins"
+        android:text="Gallery"
+        app:layout_constraintEnd_toEndOf="@+id/pinImage3"
+        app:layout_constraintStart_toStartOf="@+id/pinImage3"
+        app:layout_constraintTop_toBottomOf="@+id/pinImage3" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pinImage4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:src="#516091"
+        app:layout_constraintEnd_toStartOf="@+id/pinImage5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pinText1"
+        app:srcCompat="@drawable/model_face" />
+
+    <TextView
+        android:id="@+id/pinText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Audio"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintEnd_toEndOf="@+id/pinImage4"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toStartOf="@+id/pinImage4"
+        app:layout_constraintTop_toBottomOf="@+id/pinImage4" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pinImage5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:src="#516091"
+        app:layout_constraintEnd_toStartOf="@+id/pinImage6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pinImage4"
+        app:layout_constraintTop_toBottomOf="@+id/pinText2" />
+
+    <TextView
+        android:id="@+id/pinText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Location"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintEnd_toEndOf="@+id/pinImage5"
+        app:layout_constraintStart_toStartOf="@+id/pinImage5"
+        app:layout_constraintTop_toBottomOf="@+id/pinImage5" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pinImage6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:src="#516091"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pinImage5"
+        app:layout_constraintTop_toBottomOf="@+id/pinText3" />
+
+
+    <TextView
+        android:id="@+id/pinText6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Contact"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintEnd_toEndOf="@+id/pinImage6"
+        app:layout_constraintStart_toStartOf="@+id/pinImage6"
+        app:layout_constraintTop_toBottomOf="@+id/pinImage6" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tint="#fff"
+        app:layout_constraintBottom_toBottomOf="@+id/pinImage1"
+        app:layout_constraintEnd_toEndOf="@+id/pinImage1"
+        app:layout_constraintStart_toStartOf="@+id/pinImage1"
+        app:layout_constraintTop_toTopOf="@+id/pinImage1"
+        app:srcCompat="@drawable/ic_itemfile" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tint="#fff"
+        app:layout_constraintBottom_toBottomOf="@+id/pinImage6"
+        app:layout_constraintEnd_toEndOf="@+id/pinImage6"
+        app:layout_constraintStart_toStartOf="@+id/pinImage6"
+        app:layout_constraintTop_toTopOf="@+id/pinImage6"
+        app:srcCompat="@drawable/ic_itemcard" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tint="#fff"
+        app:layout_constraintBottom_toBottomOf="@+id/pinImage5"
+        app:layout_constraintEnd_toEndOf="@+id/pinImage5"
+        app:layout_constraintStart_toStartOf="@+id/pinImage5"
+        app:layout_constraintTop_toTopOf="@+id/pinImage5"
+        app:srcCompat="@drawable/ic_itemlocation" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tint="#fff"
+        app:layout_constraintBottom_toBottomOf="@+id/pinImage4"
+        app:layout_constraintEnd_toEndOf="@+id/pinImage4"
+        app:layout_constraintStart_toStartOf="@+id/pinImage4"
+        app:layout_constraintTop_toTopOf="@+id/pinImage4"
+        app:srcCompat="@drawable/ic_itemaudio" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pinImage2"
+        app:layout_constraintEnd_toEndOf="@+id/pinImage2"
+        app:layout_constraintStart_toStartOf="@+id/pinImage2"
+        app:layout_constraintTop_toTopOf="@+id/pinImage2"
+        app:srcCompat="@drawable/ic_baseline_camera_24" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tint="#fff"
+        app:layout_constraintBottom_toBottomOf="@+id/pinImage3"
+        app:layout_constraintEnd_toEndOf="@+id/pinImage3"
+        app:layout_constraintStart_toStartOf="@+id/pinImage3"
+        app:layout_constraintTop_toTopOf="@+id/pinImage3"
+        app:srcCompat="@drawable/ic_itemgallery" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

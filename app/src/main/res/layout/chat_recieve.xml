@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="wrap"
+        app:layout_constraintWidth_percent="0.7">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chat_recieve_matter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/chat_recieve_lft_skin"
+                android:fontFamily="sans-serif"
+                android:maxWidth="300dp"
+                android:minWidth="90dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                android:text="So, while you were gone, a lot has happened. Let me give you a brief idea."
+                android:textSize="15sp"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/chat_recieve_bot"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="5dp"
+                android:paddingBottom="3dp">
+
+                <TextView
+                    android:id="@+id/chat_recieve_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:text="12:00am"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

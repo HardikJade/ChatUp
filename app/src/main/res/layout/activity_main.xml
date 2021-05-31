@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="3dp"
+    android:scrollbarStyle="outsideInset"
+    android:verticalScrollbarPosition="defaultPosition"
+    android:background="#f3ece6"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f3ece6"
+        app:cardBackgroundColor="#f3ece6"
+        app:cardElevation="10dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="@drawable/main_toolbar_skin"
+            android:gravity="center"
+            android:minHeight="?attr/actionBarSize"
+            android:paddingRight="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/model_face"
+                app:civ_border_color="@color/border_bg"
+                app:civ_border_width="1dp" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_parent_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layoutAnimation="@anim/main_layout_animator"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/child_float_btn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:tint="@color/white"
+                android:foregroundGravity="center"
+                android:foreground="@drawable/ic_camera"
+                android:backgroundTint="#516091"
+                app:fabSize="mini"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/child_float_btn_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:foregroundGravity="center"
+
+                android:foreground="@drawable/ic_charging_circle"
+                android:backgroundTint="#516091"
+                android:foregroundTint="@color/white"
+                app:fabSize="mini"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/child_float_btn_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:foregroundGravity="center"
+                android:foreground="@drawable/ic_contact_book"
+                android:foregroundTint="@color/white"
+                android:backgroundTint="#516091"
+                app:fabSize="mini"/>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/main_float_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:clickable="true"
+                android:foreground="@drawable/ic_baseline_add_24"
+                android:foregroundGravity="center"
+                android:tint="#FFFFFF"
+                app:backgroundTint="#516091" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

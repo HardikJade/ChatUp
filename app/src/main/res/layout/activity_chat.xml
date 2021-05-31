@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_main_constrain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="3dp"
+    android:paddingRight="3dp"
+    android:paddingLeft="3dp"
+    android:background="#f3ece6"
+    android:paddingBottom="0dp"
+    tools:context=".ChatActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f3ece6"
+        app:cardBackgroundColor="#f3ece6"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/chat_toolbarr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/main_toolbar_skin"
+            android:gravity="center"
+            android:minHeight="?attr/actionBarSize"
+            android:paddingRight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/main_toolbar_item">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/model_face"
+                    app:civ_border_color="@color/border_bg"
+                    app:civ_border_width="1dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="2dp">
+
+                    <TextView
+                        android:id="@+id/chat_profile_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Will Wade"
+                        android:textColor="#516091"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:id="@+id/chat_active_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Away 10 m"
+                        android:textColor="#516091"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatActivitRecyclerParent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:keepScreenOn="false"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        tools:listitem="@layout/activity_chat_send_activity" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/chatActivitRecyclerParent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/imageButton"-->
+        <!--            android:layout_width="50dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:padding="10dp"-->
+        <!--            android:scaleType="centerCrop"-->
+        <!--            android:background="@drawable/round_round"-->
+        <!--            android:backgroundTint="#516091"-->
+        <!--            app:srcCompat="@drawable/ic_happy"-->
+        <!--            android:tint="#ADEBBE"-->
+        <!--            tools:ignore="VectorDrawableCompat" />-->
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_round"
+            android:backgroundTint="#61707070"
+            android:elevation="5dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:hint="@string/type_somthing"
+                android:lines="100"
+                android:maxLines="6"
+                android:gravity="top"
+                android:singleLine="false"
+
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="10dp"
+                android:textColor="#000"
+                android:textSize="18sp"
+
+                tools:ignore="NestedWeights" />
+
+
+            <ImageButton
+                android:id="@+id/chatActSmile"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginRight="15dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:tint="#707070"
+                app:srcCompat="@drawable/ic_happy"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageButton
+                android:id="@+id/chatactPin"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginRight="15dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:tint="#707070"
+                app:srcCompat="@drawable/ic_clip"
+                tools:ignore="VectorDrawableCompat" />
+
+
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/chatActSend"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_round"
+            android:backgroundTint="#516091"
+            android:padding="12dp"
+            android:scaleType="centerCrop"
+            android:tint="#ADEBBE"
+            app:srcCompat="@drawable/ic_send"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

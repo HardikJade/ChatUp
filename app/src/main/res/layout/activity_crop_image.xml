@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CropImageHelper.CropImageActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/cropImageRotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="30dp"
+            app:srcCompat="@drawable/ic_baseline_rotate_left_24"
+            android:contentDescription="TODO"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/cropImageGetFinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="30dp"
+            app:srcCompat="@drawable/ic_baseline_check_24"
+            android:contentDescription="TODO"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
+
+    <com.theartofdev.edmodo.cropper.CropImageView
+        android:id="@+id/cropImageWindow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cropAutoZoomEnabled="false"
+        app:cropGuidelines="on"
+        app:cropShowProgressBar="true"
+        app:cropInitialCropWindowPaddingRatio="0"
+        android:background="#101010"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

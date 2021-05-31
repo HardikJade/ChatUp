@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+
+    tools:context=".ItemWithCamera.FullCameraAccess">
+    <LinearLayout
+        android:id="@+id/camera_activity_tool"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#000"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/return_capture_preview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/preview_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            tools:ignore="VectorDrawableCompat" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/preview_delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="center"
+                android:padding="5dp"
+                app:srcCompat="@drawable/ic_baseline_delete_outline_24"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageView
+                android:id="@+id/preview_crop_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:foregroundGravity="center"
+                android:padding="5dp"
+                app:srcCompat="@drawable/ic_baseline_crop_rotate_24"
+                tools:ignore="VectorDrawableCompat" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/return_capture_preview"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:padding="10dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/camera_add_caption"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/camera_activity_tool"-->
+<!--        tools:srcCompat="@tools:sample/avatars" />-->
+
+
+    <TextureView
+        android:id="@+id/live_camera_preview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/live_capture_preview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_activity_tool" />
+
+
+
+    <EditText
+        android:id="@+id/live_capture_preview"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#A9000000"
+        android:ems="10"
+        android:hint="Enter Caption"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#707070"
+        android:textColorHint="#707070"
+        app:layout_constraintTop_toBottomOf="@+id/return_capture_preview" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/live_capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="44dp"
+        android:clickable="true"
+        android:foreground="@drawable/ic_baseline_check_24"
+        android:foregroundGravity="center"
+        android:foregroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

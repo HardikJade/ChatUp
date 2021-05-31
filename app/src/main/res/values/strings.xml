@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Chat Up</string>
+    <string name="enter_your_number">Enter Your Number</string>
+    <string name="string_enter_your_number" />
+    <string name="object_last_message">Object Last Message</string>
+    <string name="object_name">Object Name</string>
+    <string name="type_somthing">Type Somthing</string>
+    <string name="chat_up">Chat Up</string>
+</resources>
